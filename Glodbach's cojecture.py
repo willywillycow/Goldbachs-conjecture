@@ -34,8 +34,6 @@ def check(number):
     else:
         print("\033 ------------------------------")
         print("tagging:" + " " + str(taged))
-        print("prime 1:" + " " + str(chose_1))
-        print("prime 2:" + " " + str(chose_2))
         print("------------------------------ \033")
         print("\n")
 
