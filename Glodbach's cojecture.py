@@ -1,6 +1,6 @@
 primelist = []
 primetag = 2
-taged = 3
+taged = 4
 
 def isprime(number):
     isprime = None
