@@ -22,31 +22,36 @@ def detect(number):
 def check(number):
     accord = None
     success = None
+    kill = None
     result_1 = None
     result_2 = None
     for chose_1 in primelist:
         for chose_2 in primelist:
-            if not chose_2 > number:
-                if chose_1 + chose_2 == taged:
-                    print("\033[1;36m$!------------------------------!$")
-                    print("tagging:" + " " + str(taged))
-                    print("prime 1:" + " " + str(chose_1))
-                    print("prime 2:" + " " + str(chose_2))
-                    print("$!------------------------------!$ \033[m")
-                    print("\n")
-                    accord = True
+            if not chose_1 >= number:
+                if not chose_2 >= number:
+                    kill = False
+                    if chose_1 + chose_2 == taged:
+                        print("\033[1;36m$!------------------------------!$")
+                        print("tagging:" + " " + str(taged))
+                        print("prime 1:" + " " + str(chose_1))
+                        print("prime 2:" + " " + str(chose_2))
+                        print("$!------------------------------!$ \033[m")
+                        print("\n")
+                        accord = True
+                    else:
+                        print("\033[m------------------------------")
+                        print("tagging:" + " " + str(taged))
+                        print("prime 1:" + " " + str(chose_1))
+                        print("prime 2:" + " " + str(chose_2))
+                        print("------------------------------\033[m")
+                        print("\n")
                 else:
-                    print("\033[m------------------------------")
-                    print("tagging:" + " " + str(taged))
-                    print("prime 1:" + " " + str(chose_1))
-                    print("prime 2:" + " " + str(chose_2))
-                    print("------------------------------\033[m")
-                    print("\n")
+                    kill = True
             else:
                 result_1 = chose_1
                 result_2 = chose_2
                 success = True
-            if accord or success:
+            if accord or success or kill:
                 break
         if accord or success:
             break
