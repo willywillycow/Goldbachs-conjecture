@@ -61,8 +61,6 @@ def check(number):
         print("\033[1;32m!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
         print("!------------------------------!")
         print("tagging:" + " " + str(taged))
-        print("prime 1:" + " " + str(result_1))
-        print("prime 2:" + " " + str(result_2))
         print("!------------------------------!")
         print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\033[m")
         print("\n")
