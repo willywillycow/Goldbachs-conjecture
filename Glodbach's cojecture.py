@@ -70,4 +70,3 @@ while True:
     check(taged)
     primetag += 1
     taged += 2
-    
